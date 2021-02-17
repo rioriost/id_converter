@@ -48,7 +48,7 @@ Converted Table 1 from server2
 
 Yeah, this table was successfully converted!
 
-The script keeps a mapping rule in 'id_mapping' file after converting.
+The script keeps a mapping rule in 'id_mapping' file after converting. So, it can convert other tables as follows.
 
 Table 2 on server1
 
