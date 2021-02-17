@@ -1,6 +1,6 @@
 # id_converter
 
-If you're using multiple MySQL servers having the same tables. Ideally, the scenario is easily supposed when you must add servers to manage the increasing workload such as growth of your business.
+If you're using multiple MySQL servers having the same tables, ideally, the scenario is easily supposed when you must add servers to manage the increasing workload such as growth of your business.
 
 Table 1 on server1
 
