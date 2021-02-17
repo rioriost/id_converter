@@ -86,6 +86,15 @@ Converted Table 2 from server2
 | 5 | opq | rsu | 2 | enter2 |
 | 6 | ghi | lmn | 3 | service3 |
 
+複数のCSVを一括で変換するには以下のようにします。
+
+```
+for f in `ls sources/server*_table1.csv`; do
+    fname=$(basename $f|cut -d '.' -f 1)
+    ./id_converter.py $f "converted/${fname}_new.csv" -c 2
+done
+```
+
 使い慣れたMySQLクライアントを使って、[Azure Database for MySQL](https://azure.microsoft.com/en-us/services/mysql/)に変換後のCSVをリストアします。さらに、[pgloader](https://pgloader.io)を使えば、MySQLからPostgreSQL Hyperscale (Citus)への移行は簡単にできます。
 
 ```
