@@ -86,6 +86,15 @@ Converted Table 2 from server2
 | 5 | opq | rsu | 2 | enter2 |
 | 6 | ghi | lmn | 3 | service3 |
 
+To convert multiple CSVs.
+
+```
+for f in `ls sources/server*_table1.csv`; do
+    fname=$(basename $f|cut -d '.' -f 1)
+    ./id_converter.py $f "converted/${fname}_new.csv" -c 2
+done
+```
+
 Restore the tables on [Azure Database for MySQL](https://azure.microsoft.com/en-us/services/mysql/) with converted CSVs using your favorite mysql client. And [pgloader](https://pgloader.io) will be useful to migrate from MySQL to PostgreSQL Hyperscale (Citus).
 
 ```
